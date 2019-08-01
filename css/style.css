@@ -12,6 +12,63 @@ body{
     margin: 0;
 }
 
+
+div.ani1,
+div.ani2 {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size: 5em;
+    text-shadow: 5px 5px 8px #000000;
+  }
+  
+  div.ani1 {    
+    animation: showup 7s infinite;
+  }
+  
+  div.ani2 {
+    width:0px;
+    animation: reveal 7s infinite;
+  }
+  
+  div.ani2 span {
+    margin-left:-355px;
+    margin-top: 3em;
+    animation: slidein 7s infinite;
+    font-size: .4em;
+  }
+  
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:0;}
+  }
+  
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:355px;}
+      80% {opacity:1;}
+      100% {opacity:0;width:355px;}
+  }
+  
+
+
+
+
+
+
+
+
+
 .navbar{
     background-color: rgba(0, 0, 0, 0.7) !important;
 }
@@ -61,12 +118,18 @@ body{
     background-color:  rgb(26, 56, 187);
     border:none;
     color: #ffffff;
+    position: absolute;
+    top: 190%;
+    left:52%;
     transition: all 300ms ease-in;
 }
 
 .site-content .btn-outline{
     background-color: rgb(3, 105, 8);
     color: #ffffff;
+    position: absolute;
+    top: 190%;
+    right: 55%;
     transition: all 300ms ease-in;
 }
 
